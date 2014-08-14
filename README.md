@@ -44,6 +44,6 @@ You must have the livereload browser extension installed for this.
 
 [Live Reload Chrome Browser Extestion](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en)
 
-[Live Reload Safari Browser Extestion](http://download.livereload.com/2.0.8/LiveReload-2.0.8.xpi)
+[Live Reload Firefox Browser Extestion](http://download.livereload.com/2.0.8/LiveReload-2.0.8.xpi)
 
-[Live Reload Firefox Browser Extestion](http://download.livereload.com/2.0.9/LiveReload-2.0.9.safariextz)
+[Live Reload Safari Browser Extestion](http://download.livereload.com/2.0.9/LiveReload-2.0.9.safariextz)
