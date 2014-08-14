@@ -41,3 +41,8 @@ Make sure your css: and sass: directories are correct :)
 ###Livereload on Watch and Styles tasks 
 Will auto reload with Livereload. If there are issues check for port conflicts.
 You must have the livereload browser extension installed for this. 
+[Live Reload Chrome Browser Extestion](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en)
+
+[Live Reload Safari Browser Extestion](http://download.livereload.com/2.0.8/LiveReload-2.0.8.xpi)
+
+[Live Reload Firefox Browser Extestion](http://download.livereload.com/2.0.9/LiveReload-2.0.9.safariextz)
