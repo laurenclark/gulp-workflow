@@ -1,0 +1,21 @@
+{
+  "name": "simple-gulp-workflow",
+  "version": "1.0.0",
+  "description": "Gulp Package file, install with 'npm install'. Use Sass, Compass, Uncss, Uglify, Livereload, Imagemin and Livereload with your project. No frameworks or templating engines, just simple stuff for small projects :)",
+"main": "gulpfile.js",
+"dependencies": {
+  "gulp": "^3.8.7",
+  "gulp-compass": "^1.2.0",
+  "gulp-imagemin": "^0.6.2",
+  "gulp-livereload": "^2.1.0",
+  "gulp-plumber": "^0.6.4",
+  "gulp-ruby-sass": "^0.7.1",
+  "gulp-uglify": "^0.3.1",
+  "gulp-uncss": "^0.4.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Lauren Clark"
+  }
