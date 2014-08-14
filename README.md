@@ -1,5 +1,5 @@
 #Basic Gulp File 
-##Use Sass, Compass, Uncss, Uglify, Livereload, Imagemin and Livereload with your project.
+##Use Sass, Compass, Uncss, Uglify, Livereload and Imagemin with your project.
 No frameworks or templating engines, just simple stuff for small projects, or as a starting point for writing your own.
 
 
