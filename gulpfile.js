@@ -1,13 +1,20 @@
 var gulp = require('gulp'),
-uglify = require('gulp-uglify'),
-compass = require('gulp-compass'),
-plumber = require('gulp-plumber'),
-uncss = require('gulp-uncss'),
-livereload = require('gulp-livereload'),
-imagemin = require('gulp-imagemin');
+    uglify = require('gulp-uglify'),
+    compass = require('gulp-compass'),
+    plumber = require('gulp-plumber'),
+    uncss = require('gulp-uncss'),
+    livereload = require('gulp-livereload'),
+    imagemin = require('gulp-imagemin');
+    
+    
+    // sass = require('gulp-ruby-sass');
+// Uncomment if not using compass -> replace this with gulp-libsass for speed! 
 
 
-// sass = require('gulp-ruby-sass'); Uncomment if not using compass -> replace this with gulp-libsass for speed! 
+//requires all your packages - you can install these with the package.json included. Just 'npm install' in your project directory.
+
+
+
 
 /////////////////
 //Scripts Tasks
@@ -15,10 +22,10 @@ imagemin = require('gulp-imagemin');
 
 //Uglify
 gulp.task('scripts', function(){
-		gulp.src('js/*.js')//.scr allows command to be run on directory. Wildcard any .js file.
+		gulp.src('js/*.js')//.src allows command to be run on directory. Wildcard any .js file.
 		.pipe(plumber())
 	.pipe(uglify()) 	//.pipe passes the output to the function or method
-	.pipe(gulp.dest('build/js'));		//where the output goes. For smaller projects the same folder is fine.								
+	.pipe(gulp.dest('build/js'));//where the output goes. For smaller projects the same folder is fine.								
 })
 
 //////////////
@@ -40,7 +47,7 @@ gulp.task('scripts', function(){
 gulp.task('styles', function(){
 	gulp.src('scss/**/*.scss')
 	.pipe(plumber())
-	.pipe(compass({
+	.pipe(compass({ //add your config.rb settings here.
 		config_file: 'config.rb',
 		css: 'css',
 		sass: 'scss'
@@ -50,7 +57,7 @@ gulp.task('styles', function(){
 })
 
 
-//Uncss (USE ONLY FOR TEMPLATES)
+//Uncss 
 gulp.task('uncss', function(){
 	return gulp.src('css/*.css')
 	.pipe(uncss({
@@ -59,7 +66,7 @@ gulp.task('uncss', function(){
 	.pipe(gulp.dest('./build/css'));
 });
 
-//You can then do per-page css and reduce load times
+//You can then do per-page css and reduce load times, or just scrap extra boilerplate or crap you wrote and didn't use.
 
 
 ////////////////
@@ -74,20 +81,18 @@ gulp.task('image', function(){
 	.pipe(gulp.dest('build/img'));
 });
 
-
 ////////////////
-///Images Tasks
+///Default Tasks
 ///////////////
 
 //Watch Tasks
 gulp.task('watch', function() {
 	var server = livereload();
-	gulp.watch('js/*.js', ['scripts']);//string or directory of the files (or **/*.js to pick up all files)
-	gulp.watch('scss/**/*.scss', ['styles']);	//watch all the files specified and then applies the function
+	gulp.watch('js/*.js', ['scripts']); //string or directory of the files (or **/*.js to pick up all files)
+	gulp.watch('scss/**/*.scss', ['styles']); //watch all the files specified and then execute the function
 });
 
-/////////////////////
 ///Default Build Task
-////////////////////
-
-gulp.task('default', ['scripts', 'styles', 'image']); //You can add the watcher command to the default task, this isn't recommended for ALL things, you may want to just uglify JS on production.
+gulp.task('default', ['scripts', 'styles', 'image']);
+//You can add the watcher command to the default task,
+//this isn't recommended for ALL things, you may want to just uglify JS on production.
