@@ -5,11 +5,11 @@ No frameworks or templating engines, just simple stuff for small projects, or as
 
 ###Getting Started
 
-You'll need to install Node.js, and then ```npm install -g Gulp``` from the command line.
+You'll need to install Node.js, and then ```$ npm install gulp -g``` from the command line.
 
 - Gulpfile.js -> Put this in your main directory
 - Package.json -> Put this in your main directory too.
-- Run ```npm install``` from your project directory using the command line. 
+- Run ```$ npm install``` from your project directory using the command line. 
 - This will install all the required gulp packages.
 
 
