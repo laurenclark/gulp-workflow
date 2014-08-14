@@ -7,19 +7,31 @@ No frameworks or templating engines, just simple stuff for small projects :)
 
 ###Commands
 
-```gulp```
+```
+gulp
+```
+
 - Default task will run the build.
 Compiles all Sass, Compresses/Uglifies Javascript and compresses images. Outputs to a 'build' folder.
 
-```gulp watch```
+```
+gulp watch
+```
+
 Watches Sass files and JS files, compiles/compresses on the fly.
 Run this like you would ```compass watch```
 Auto-reloads browser.
 
-```gulp image```
+```
+gulp image
+```
+
 Run imagemin and compress images. Outputs to a 'build' folder.
 
-```gulp styles```
+```
+gulp styles
+```
+
 Builds using compass or sass, compass set as default for now.
 When using compass, you can use this instead of your config.rb just set your Compass options and requires in the compass() pipe. Using it with config .rb is recommended for the http path.
 
