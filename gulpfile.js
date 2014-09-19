@@ -1,24 +1,15 @@
-var gulp = require('gulp'),
-    uglify = require('gulp-uglify'),
-    compass = require('gulp-compass'),
-    plumber = require('gulp-plumber'),
-    uncss = require('gulp-uncss'),
-    livereload = require('gulp-livereload'),
-    imagemin = require('gulp-imagemin');
-    
-    
-    // sass = require('gulp-ruby-sass');
-// Uncomment if not using compass -> replace this with gulp-libsass for speed! 
-
-
 //requires all your packages - you can install these with the package.json included. Just 'npm install' in your project directory.
+var gulp       = require('gulp'),
+    uglify     = require('gulp-uglify'),
+    compass    = require('gulp-compass'),
+    plumber    = require('gulp-plumber'),
+    uncss      = require('gulp-uncss'),
+    livereload = require('gulp-livereload'),
+    imagemin   = require('gulp-imagemin');
+    // sass    = require('gulp-ruby-sass');
+    // Uncomment if not using compass -> replace this with gulp-libsass for speed! 
 
-
-
-
-/////////////////
 //Scripts Tasks
-////////////////
 
 //Uglify
 gulp.task('scripts', function(){
@@ -28,10 +19,7 @@ gulp.task('scripts', function(){
 	.pipe(gulp.dest('build/js'));//where the output goes. For smaller projects the same folder is fine.								
 })
 
-//////////////
 //Styles Tasks
-/////////////
-
 
 //Sass compiler
 // gulp.task('styles', function(){
@@ -69,9 +57,7 @@ gulp.task('uncss', function(){
 //You can then do per-page css and reduce load times, or just scrap extra boilerplate or crap you wrote and didn't use.
 
 
-////////////////
-///Images Tasks
-///////////////
+//Images Tasks
 
 //Compress
 
@@ -81,9 +67,8 @@ gulp.task('image', function(){
 	.pipe(gulp.dest('build/img'));
 });
 
-////////////////
-///Default Tasks
-///////////////
+
+//Default Tasks
 
 //Watch Tasks
 gulp.task('watch', function() {
