@@ -5,9 +5,19 @@ var gulp       = require('gulp'),
     plumber    = require('gulp-plumber'),
     uncss      = require('gulp-uncss'),
     livereload = require('gulp-livereload'),
-    imagemin   = require('gulp-imagemin');
+    imagemin   = require('gulp-imagemin'),
+    autoprefixer = require('gulp-autoprefixer');
+
     // sass    = require('gulp-ruby-sass');
     // Uncomment if not using compass -> replace this with gulp-libsass for speed! 
+
+
+
+var onError = function (err) {  
+  gutil.beep();
+  console.log(err);
+};
+
 
 //Scripts Tasks
 
@@ -44,6 +54,16 @@ gulp.task('styles', function(){
 	.pipe(livereload()); 
 })
 
+//Prefix
+gulp.task('prefixify', function(){
+    return gulp.src('css/*.css')
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
+  .pipe(gulp.dest('./build/css'));
+  });
+
 
 //Uncss 
 gulp.task('uncss', function(){
@@ -78,6 +98,6 @@ gulp.task('watch', function() {
 });
 
 ///Default Build Task
-gulp.task('default', ['scripts', 'styles', 'image']);
+gulp.task('default', ['scripts', 'styles', 'image', 'prefixify']);
 //You can add the watcher command to the default task,
 //this isn't recommended for ALL things, you may want to just uglify JS on production.
