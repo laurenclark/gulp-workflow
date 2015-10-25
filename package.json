@@ -13,9 +13,14 @@
   "gulp-uglify": "^0.3.1",
   "gulp-uncss": "^0.4.5"
   },
+  "repository": {
+  "type": "git",
+  "url": "https://github.com/laurenclark/gulp-workflow.git"
+},
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "author": "Lauren Clark"
+    "author": "Lauren Clark",
+    "license": "MIT"
   }
