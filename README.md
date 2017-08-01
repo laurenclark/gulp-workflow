@@ -1,9 +1,9 @@
-#Basic Gulp File 
-##Use Sass, Compass, Uncss, Uglify, Livereload and Imagemin with your project.
+# Basic Gulp File 
+## Use Sass, Compass, Uncss, Uglify, Livereload and Imagemin with your project.
 No frameworks or templating engines, just simple stuff for small projects, or as a starting point for writing your own.
 
 
-###Getting Started
+### Getting Started
 
 You'll need to install Node.js, and then ```$ npm install gulp -g``` from the command line.
 
@@ -15,7 +15,7 @@ You'll need to install Node.js, and then ```$ npm install gulp -g``` from the co
 
 
 
-###Commands
+### Commands
 
 ```
 gulp
@@ -52,7 +52,7 @@ When using Compass, you can use this instead of your config.rb just set your Com
 Make sure your css: and sass: directories are correct :smiley_cat:
 
 
-###Livereload on Watch and Styles tasks 
+### Livereload on Watch and Styles tasks 
 Will auto reload with Livereload. If there are issues check for port conflicts.
 You must have the livereload browser extension installed for this. 
 
