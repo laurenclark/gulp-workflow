@@ -5,14 +5,16 @@
   "main": "gulpfile.js",
   "dependencies": {
     "gridzilla": "^1.0.5",
-    "gulp": "^4.0.0",
+    "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-imagemin": "^4.1.0",
     "gulp-livereload": "^3.8.1",
     "gulp-postcss": "^7.0.1",
     "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^2.6.4",
-    "gulp-uglify": "^3.0.0"
+    "gulp-uglify": "^3.0.0",
+    "gulp-util": "",
+    "gulp-plumber": ""
   },
   "repository": {
     "type": "git",

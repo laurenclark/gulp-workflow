@@ -31,8 +31,6 @@ gulp watch
 
 Watches Sass files and JS files, compiles/compresses on the fly.
 
-Run this like you would ```compass watch```
-
 Auto-reloads browser.
 
 ```
@@ -47,7 +45,7 @@ gulp styles
 ```
 
 Builds using compass or Sass, Compass set as default for now.
-When using Compass, you can use this instead of your config.rb just set your Compass options and requires in the compass() pipe. Using it with config .rb is recommended for the http path.
+When using Compass, you can use this instead of your config.rb just set your Compass options and requires in the compass() pipe. Using it with config.rb is recommended for the http path.
 
 Make sure your css: and sass: directories are correct :smiley_cat:
 
