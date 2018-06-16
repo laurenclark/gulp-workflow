@@ -1,6 +1,6 @@
 # Basic Gulp File 
-## Use Sass, Compass, Uncss, Uglify, Livereload and Imagemin with your project.
-No frameworks or templating engines, just simple stuff for small projects, or as a starting point for writing your own.
+## Use Sass, Gridzilla, PostCss, Uglify, Livereload and Imagemin with your project.
+No bulky frameworks or templating engines, just simple stuff for small projects, or as a starting point for writing your own.
 
 
 ### Getting Started
@@ -12,7 +12,7 @@ You'll need to install Node.js, and then ```$ npm install gulp -g``` from the co
 - Run ```$ npm install``` from your project directory using the command line. 
 - This will install all the required gulp packages.
 
-
+You can view the documentation for Gridzilla here https://teefouad.github.io/gridzilla/
 
 
 ### Commands
@@ -23,7 +23,7 @@ gulp
 
 Default task will run the build.
 Compiles all Sass, Compresses/Uglifies Javascript and compresses images. 
-Outputs to a 'build' folder.
+Outputs to a 'dist' folder. 
 
 ```
 gulp watch
@@ -40,7 +40,7 @@ gulp image
 ```
 
 Run imagemin and compress images. 
-Outputs to a 'build' folder.
+Outputs to a 'dist' folder.
 
 ```
 gulp styles
