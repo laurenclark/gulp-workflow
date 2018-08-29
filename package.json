@@ -1,6 +1,6 @@
 {
   "name": "simple-gulp-workflow",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Gulp Package file, install with 'npm install'. Use Sass, Postcss, Uglify, Livereload, Imagemin and Livereload with your project. Now with Gridzilla, just simple stuff, with a mobile-first flexbox grid for small projects :)",
   "main": "gulpfile.js",
   "dependencies": {
@@ -9,12 +9,11 @@
     "gulp-autoprefixer": "^5.0.0",
     "gulp-imagemin": "^4.1.0",
     "gulp-livereload": "^3.8.1",
-    "gulp-postcss": "^7.0.1",
     "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^2.6.4",
-    "gulp-uglify": "^3.0.0",
-    "gulp-util": "",
-    "gulp-plumber": ""
+    "gulp-uglify": "^3.0.1",
+    "gulp-plumber": "",
+    "pump": ""
   },
   "repository": {
     "type": "git",

@@ -44,11 +44,6 @@ Outputs to a 'dist' folder.
 gulp styles
 ```
 
-Builds using compass or Sass, Compass set as default for now.
-When using Compass, you can use this instead of your config.rb just set your Compass options and requires in the compass() pipe. Using it with config.rb is recommended for the http path.
-
-Make sure your css: and sass: directories are correct :smiley_cat:
-
 
 ### Livereload on Watch and Styles tasks 
 Will auto reload with Livereload. If there are issues check for port conflicts.
