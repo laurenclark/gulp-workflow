@@ -1,5 +1,5 @@
-# Basic Gulp File 
-## Use Sass, Gridzilla, PostCss, Uglify, Livereload and Imagemin with your project.
+# Basic Gulp File
+## Use Sass, Gridzilla, Autoprefix, CSS  JS and Image Minification with your project.
 No bulky frameworks or templating engines, just simple stuff for small projects, or as a starting point for writing your own.
 
 
@@ -22,7 +22,7 @@ gulp
 ```
 
 Default task will run the build.
-Compiles all Sass, Compresses/Uglifies Javascript and compresses images. 
+Compiles all Sass, minifies Javascript, CSS and compresses images. 
 Outputs to a 'dist' folder. 
 
 ```
@@ -31,7 +31,6 @@ gulp watch
 
 Watches Sass files and JS files, compiles/compresses on the fly.
 
-Auto-reloads browser.
 
 ```
 gulp image
@@ -45,12 +44,3 @@ gulp styles
 ```
 
 
-### Livereload on Watch and Styles tasks 
-Will auto reload with Livereload. If there are issues check for port conflicts.
-You must have the livereload browser extension installed for this. 
-
-[Live Reload Chrome Browser Extestion](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en)
-
-[Live Reload Firefox Browser Extestion](http://download.livereload.com/2.0.8/LiveReload-2.0.8.xpi)
-
-[Live Reload Safari Browser Extestion](http://download.livereload.com/2.0.9/LiveReload-2.0.9.safariextz)

@@ -2,12 +2,12 @@
 const   gulp = require('gulp'),
 		pump = require('pump'),
 		uglify = require('gulp-uglify'),
-		livereload = require('gulp-livereload'),
 		imagemin = require('gulp-imagemin'),
 		plumber = require('gulp-plumber'),
 		autoprefixer = require('gulp-autoprefixer'),
 		sass = require('gulp-sass'),
 		sourcemaps = require('gulp-sourcemaps'),
+		cleanCSS = require('gulp-clean-css'),
 		gridzilla = require('gridzilla');
 
 
@@ -16,15 +16,16 @@ const outputDir = 'dist/';
 const sourceDir = 'src/';
 
 let path = {
+	sassfileSrc: sourceDir + 'sass/app.scss',
+	sassfileDist: outputDir + 'sass/app.scss',
 	styles: sourceDir + 'sass/**/*.scss',
 	stylesOutput: outputDir + 'css',
+	stylefile: outputDir + 'app.css',
 	js: sourceDir + 'js/*.js',
 	jsOutput: outputDir + 'js',
 	img: sourceDir + 'image/*',
 	imgOutput: outputDir + 'image',
 };
-
-let codeType = "php";
 
 function errorLog(error) {
 	console.error.bind(error);
@@ -52,30 +53,25 @@ gulp.task('scripts', function (cb) {
 
 //Styles Task
 gulp.task('styles', function () {
-	return gulp.src(path.styles)
+	return gulp.src(path.sassfileSrc)
 		.pipe(plumber(function (error) {
 			this.emit('end');
 		}))
+		.pipe(sourcemaps.init())
 		.pipe(sass({
 			importer: gridzilla,
+			outputStyle: 'compact',
 			includePaths: 'node_modules/gridzilla'
 		}))
-		.pipe(sourcemaps.init())
 		.pipe(sass().on('error', sass.logError))
-		.pipe(sourcemaps.write())
-		.pipe(gulp.dest(path.stylesOutput))
-		.pipe(livereload());
-});
-
-//Prefixfy
-gulp.task('prefixify', function () {
-	return gulp.src(path.styles)
 		.pipe(plumber())
 		.pipe(autoprefixer({
 			browsers: ['last 2 versions'],
 			cascade: false
 		}))
-		.pipe(gulp.dest(path.stylesOutput));
+		.pipe(cleanCSS())
+		.pipe(sourcemaps.write())
+		.pipe(gulp.dest(path.stylesOutput))
 });
 
 /*******************
@@ -91,30 +87,16 @@ gulp.task('image', function () {
 
 
 /*******************
- * Page Tasks
- ********************/
-
-//Watch the html/php of the page you're on
-gulp.task(codeType, function () {
-	return gulp.src('*.' + codeType)
-		.pipe(plumber())
-		.pipe(gulp.dest(''))
-		.pipe(livereload())
-});
-
-/*******************
  * Default Tasks
  ********************/
 
 //Watch Tasks
 gulp.task('watch', function () {
-	livereload.listen();
 	gulp.watch(path.js, ['scripts']); //string or directory of the files (or **/*.js to pick up all files)
 	gulp.watch(path.styles, ['styles']); //watch all the files specified and then execute the function
-	gulp.watch('*.' + codeType, ['page']);
 });
 
 ///Default dist build Task
-gulp.task('default', ['scripts', 'styles', 'image', 'prefixify']);
+gulp.task('default', ['scripts', 'styles', 'image']);
 //You can add the watcher command to the default task,
 //this isn't recommended for ALL things, you may want to just uglify JS on production.
