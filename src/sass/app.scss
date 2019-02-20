@@ -1,8 +1,10 @@
 @import 'vendor/normalizer';
 @import 'vendor/gridzilla';
+@import 'vendor/base';
+@import 'components/settings';
 @import 'components/variables';
-
-
+@import 'components/mixins';
+@import 'components/global';
 
 body {
 	background: $primary-color;
