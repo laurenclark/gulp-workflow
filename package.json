@@ -1,6 +1,6 @@
 {
   "name": "simple-gulp-workflow",
-  "version": "1.2",
+  "version": "1.2.0",
   "description": "Gulp Package file, install with 'npm install'. Use Sass, Sourcemaps, Minify CSS Output Uglify, Imagemin with your project. Now with Gridzilla, just simple stuff, with a mobile-first flexbox grid for small projects or easily drop into any current project",
   "main": "gulpfile.js",
   "dependencies": {
