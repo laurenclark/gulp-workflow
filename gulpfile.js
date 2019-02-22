@@ -42,9 +42,7 @@ gulp.task('scripts', function (cb) {
 		gulp.src(path.js),
 		uglify(),
 		gulp.dest((path.jsOutput))
-	],
-	cb
-	);	
+	],cb);	
 });
 
 /*******************
