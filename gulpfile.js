@@ -54,16 +54,16 @@ gulp.task('scripts', function (cb) {
 //Styles Task
 gulp.task('styles', function () {
 	return gulp.src(path.sassfileSrc)
+		.pipe(sourcemaps.init())
 		.pipe(plumber(function (error) {
 			this.emit('end');
 		}))
-		.pipe(sourcemaps.init())
 		.pipe(sass({
 			importer: gridzilla,
 			outputStyle: 'compact',
 			includePaths: 'node_modules/gridzilla'
-		}))
-		.pipe(sass().on('error', sass.logError))
+		}).on('error', sass.logError))
+
 		.pipe(plumber())
 		.pipe(autoprefixer({
 			browsers: ['last 2 versions'],
