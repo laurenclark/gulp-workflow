@@ -1,5 +1,5 @@
 # 🛑 DEPRECATED
-- NPM scripts for most projects are sufficient so I won't be updating this to work with the latest Gulp syntax but it should still work with older versions of Gulp (prior to 4) 
+- NPM scripts for most projects are sufficient so I won't be updating this to work with the latest Gulp update but it should still work with older versions of Gulp (prior to 4) 
 
 
 # Basic Gulp File
